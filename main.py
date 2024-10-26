@@ -38,3 +38,18 @@ emloyee2.print_employee_info()
 emloyee2.show_transport()
 emloyee2.to_receive_a_salary()
 
+print()
+
+class Inspector(Employee):
+    def __init__(self,surname, name, age, experience,license):
+        super().__init__(surname,name,age,experience)
+        self.License=license
+        self.Salary = experience*0.8*800 + 8000
+    def show_license(self):
+        print("Ліцендзія:", self.License)
+
+emloyee3=Inspector("Italiano","Pero",66,11,"Sigma license")
+
+emloyee3.print_employee_info()
+emloyee3.show_license()
+emloyee3.to_receive_a_salary()
